@@ -8,7 +8,7 @@ Creational
 - [Singleton](#singleton)
 
 
-#Factory Method
+# Factory Method
 
 It defines an interface for creating an object, but leaves the choice of its type to the subclasses, creation being deferred at run-time.
 A simple real life example of the Factory Method is the payment methods.
