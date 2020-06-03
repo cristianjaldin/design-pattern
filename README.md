@@ -12,6 +12,8 @@ One of the advantages is that you can easily add new forms of payment.
 
 # Abstract Factory
 
+![Abstrac Factory](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/creational/abstractfactory/Abstract%20Factory.gif?raw=true)
+
 # Builder
 
 # Prototype
