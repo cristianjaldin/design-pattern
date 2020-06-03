@@ -9,3 +9,11 @@ One of the advantages is that you can easily add new forms of payment.
 
 ![Factory Method](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/creational/factorymethod/Factory%20Method.gif?raw=true)
 
+
+# Abstract Factory
+
+# Builder
+
+# Prototype
+
+# Singleton
