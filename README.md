@@ -27,6 +27,8 @@ In this example we have an abstract factory that groups together a warrior facto
 
 # Builder
 
+![Builder](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/creational/builder/Builder.gif?raw=true)
+
 # Prototype
 
 # Singleton

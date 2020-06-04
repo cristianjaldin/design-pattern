@@ -1,5 +1,5 @@
 package design.pattern.examples.creational.abstractfactory;
 
 public interface Warrior {
-	void doAttack();
+	void doAttack(Weapon weapon);
 }
