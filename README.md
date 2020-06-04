@@ -29,14 +29,13 @@ In this example we have an abstract factory that groups together a warrior facto
 
 ```java
 AbstractFactory<?> abstractFactory = FactoryProvider.getFactory("WARRIOR");
-
 Warrior oneSamurai = (Warrior) abstractFactory.create("SAMURAI");
 Warrior oneViking = (Warrior) abstractFactory.create("VIKING");
 
 AbstractFactory<?> abstractFactory1 = FactoryProvider.getFactory("WEAPON");
 Weapon oneSword = (Weapon) abstractFactory1.create("SWORD");
 Weapon onAxe = (Weapon) abstractFactory1.create("AXE");
-
+//Fight!!!
 oneSamurai.doAttack(oneSword);
 oneViking.doAttack(onAxe);
 ```
