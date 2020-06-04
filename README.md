@@ -20,6 +20,9 @@ One of the advantages is that you can easily add new forms of payment.
 
 # Abstract Factory
 
+It provides a way to encapsulate a group of **individual factories** that have a common theme without specifying their concrete classes.
+In this example we have an abstract factory that groups together a warrior factory and an weapon factory.
+
 ![Abstrac Factory](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/creational/abstractfactory/Abstract%20Factory.gif?raw=true)
 
 # Builder
