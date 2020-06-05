@@ -57,4 +57,15 @@ BankAccount bankAccount = new BankAccountBuilder(1114467234l, "Cristian Jaldin")
 
 # Prototype
 
+```java
+ElectronicProductPrototype play = PrototypeFactory.getInstance(PLAY);
+
+ElectronicProductPrototype tv = PrototypeFactory.getInstance(TV);
+
+ElectronicProductPrototype laptop = PrototypeFactory.getInstance(LAPTOP);
+
+```
+![Prototype](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/creational/prototype/Prototype.gif?raw=true)
+
+
 # Singleton
