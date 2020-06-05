@@ -74,7 +74,7 @@ It ensures a class has only one instance and provide a global point of access to
 
 ```java
 Shenlong shenlong = Shenlong.getINSTANCE();
-shenlong.fulfillWish("I just want to travel as much as I can, explore the world, meet people and learn from my experiences.");
+shenlong.fulfillWish("I just want to travel as much as I can, explore the world and learn from my experiences.");
 ```
 
 ![Singleton](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/creational/singleton/Singleton.gif?raw=true)
