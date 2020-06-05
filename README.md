@@ -56,12 +56,11 @@ BankAccount bankAccount = new BankAccountBuilder(1114467234l, "Cristian Jaldin")
 ![Builder](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/creational/builder/Builder.gif?raw=true)
 
 # Prototype
+It is used in scenarios where application needs to create a number of instances of a class, which has almost same state or differs very little. This pattern is used when creation of object directly is costly. 
 
 ```java
 ElectronicProductPrototype play = PrototypeFactory.getInstance(PLAY);
-
 ElectronicProductPrototype tv = PrototypeFactory.getInstance(TV);
-
 ElectronicProductPrototype laptop = PrototypeFactory.getInstance(LAPTOP);
 
 ```
