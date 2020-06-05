@@ -56,6 +56,7 @@ BankAccount bankAccount = new BankAccountBuilder(1114467234l, "Cristian Jaldin")
 ![Builder](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/creational/builder/Builder.gif?raw=true)
 
 # Prototype
+
 This pattern is used in scenarios where application needs to create a number of instances of a class, which has almost same state or differs very little. It is used when creation of object directly is costly. 
 
 ```java
@@ -68,3 +69,12 @@ ElectronicProductPrototype laptop = PrototypeFactory.getInstance(LAPTOP);
 
 
 # Singleton
+
+It ensures a class has only one instance and provide a global point of access to it. 
+
+```java
+Shenlong shenlong = Shenlong.getINSTANCE();
+shenlong.fulfillWish("I just want to travel as much as I can, explore the world, meet people and learn from my experiences.");
+```
+
+![Singleton](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/creational/singleton/Singleton.gif?raw=true)

@@ -11,6 +11,8 @@ import design.pattern.examples.creational.factorymethod.PaymentFactory;
 import design.pattern.examples.creational.factorymethod.PaymentType;
 import design.pattern.examples.creational.prototype.ElectronicProductPrototype;
 import design.pattern.examples.creational.prototype.PrototypeFactory;
+import design.pattern.examples.creational.singleton.Shenlong;
+
 import static design.pattern.examples.creational.prototype.PrototypeFactory.ElectronicProductType.PLAY;
 import static design.pattern.examples.creational.prototype.PrototypeFactory.ElectronicProductType.TV;
 import static design.pattern.examples.creational.prototype.PrototypeFactory.ElectronicProductType.LAPTOP;
@@ -25,7 +27,8 @@ public class App {
 		// factoryMethodExample();
 		// abstractFactoryExample();
 		// builderExample();
-		prototypeExample();
+		// prototypeExample();
+		singlentonExample();
 	}
 
 	private static void factoryMethodExample() {
@@ -76,5 +79,10 @@ public class App {
 			e.printStackTrace();
 		}
 	}
+	
+	private static void singlentonExample(){
+		Shenlong shenlong = Shenlong.getINSTANCE();
+		shenlong.fulfillWish("I just want to travel as much as I can, explore the world, meet people and learn from my experiences.");
+    }
 
 }
