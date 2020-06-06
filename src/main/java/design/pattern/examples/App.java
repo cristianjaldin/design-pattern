@@ -15,6 +15,9 @@ import design.pattern.examples.creational.singleton.Shenlong;
 
 import static design.pattern.examples.creational.prototype.PrototypeFactory.ElectronicProductType.PLAY;
 import static design.pattern.examples.creational.prototype.PrototypeFactory.ElectronicProductType.TV;
+
+import design.pattern.examples.behavioral.chainofresponsibility.Bank;
+
 import static design.pattern.examples.creational.prototype.PrototypeFactory.ElectronicProductType.LAPTOP;
 
 /**
@@ -28,7 +31,10 @@ public class App {
 		// abstractFactoryExample();
 		// builderExample();
 		// prototypeExample();
-		singlentonExample();
+		// singlentonExample();
+		
+		// comportamiento
+		chainofresponsibilityExample();
 	}
 
 	private static void factoryMethodExample() {
@@ -84,5 +90,10 @@ public class App {
 		Shenlong shenlong = Shenlong.getINSTANCE();
 		shenlong.fulfillWish("I just want to travel as much as I can, explore the world, meet people and learn from my experiences.");
     }
-
+	
+	private static void chainofresponsibilityExample() {
+		Bank bank = new Bank();
+		bank.applyForLoan(100000000);
+	}
+	
 }
