@@ -79,7 +79,7 @@ BankAccount bankAccount = new BankAccountBuilder(1114467234l, "Cristian Jaldin")
 
 # Prototype
 
-This pattern is used in scenarios where application needs to create a number of instances of a class, which has almost same state or differs very little. It is used when creation of object directly is costly. 
+This pattern is used in scenarios where application needs to create a number of instances of a class, which has almost same state or differs very little. It is used when creation of object directly is costly. The concept is to copy an existing object rather than creating a new instance from scratch. 
 
 ```java
 ElectronicProductPrototype play = PrototypeFactory.getInstance(PLAY);
@@ -104,6 +104,13 @@ shenlong.fulfillWish(myWish);
 
 # Chain of responsibility
 
+It builds a chain of objects to handle a call in sequential order. If one object cannot handle a call, it delegates the call to the next in the chain and so forth.
+In the following example, a bank generates a chain  of responsibility to process loan applications. The request can be processed by an executive, manager or director according to the amount.
+
+```java
+Bank bank = new Bank();
+bank.applyForLoan(100000000);
+```
 ![Chain of responsibility](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/behavioral/chainofresponsibility/Chain%20of%20responsibility.gif?raw=true)
 
 # Command
