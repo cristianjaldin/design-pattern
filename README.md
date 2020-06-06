@@ -7,6 +7,28 @@ Creational
 - [Prototype](#prototype)
 - [Singleton](#singleton)
 
+Behavioral
+- [Chain of responsibility](#chain-of-responsibility)
+- [Command](#command)
+- [Iterator](#iterator)
+- [Mediator](#mediator)
+- [Memento](#memento)
+- [Observer](#observer)
+- [State](#state)
+- [Interpreter](#interpreter)
+- [Strategy](#strategy)
+- [Template Method](#template-method)
+- [Visitor](#visitor)
+
+Structural
+- [Adapter](#adapter)
+- [Bridge](#bridge)
+- [Composite](#composite)
+- [Decorator](#decorator)
+- [Facade](#facade)
+- [Flyweight](#flyweight)
+- [Proxy](#proxy)
+
 
 # Factory Method
 
@@ -79,3 +101,47 @@ shenlong.fulfillWish(myWish);
 ```
 
 ![Singleton](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/creational/singleton/Singleton.gif?raw=true)
+
+# Chain of responsibility
+
+![Chain of responsibility](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/behavioral/chainofresponsibility/Chain%20of%20responsibility.gif?raw=true)
+
+# Command
+
+![Command](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/behavioral/command/Command.gif?raw=true)
+
+# Iterator
+
+![Iterator](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/behavioral/iterator/Iterator.gif?raw=true)
+
+# Mediator
+
+![Mediator](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/behavioral/mediator/Mediator.gif?raw=true)
+
+# Memento
+
+# Observer
+
+# State
+
+# Interpreter
+
+# Strategy
+
+# Template Method
+
+# Visitor
+
+# Adapter
+
+# Bridge
+
+# Composite
+
+# Decorator
+
+# Facade
+
+# Flyweight
+
+# Proxy
