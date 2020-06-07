@@ -17,6 +17,9 @@ import static design.pattern.examples.creational.prototype.PrototypeFactory.Elec
 import static design.pattern.examples.creational.prototype.PrototypeFactory.ElectronicProductType.TV;
 
 import design.pattern.examples.behavioral.chainofresponsibility.Bank;
+import design.pattern.examples.behavioral.state.Mobile;
+import design.pattern.examples.behavioral.state.Silent;
+import design.pattern.examples.behavioral.state.Vibration;
 
 import static design.pattern.examples.creational.prototype.PrototypeFactory.ElectronicProductType.LAPTOP;
 
@@ -34,7 +37,9 @@ public class App {
 		// singlentonExample();
 		
 		// comportamiento
-		chainofresponsibilityExample();
+		// chainofresponsibilityExample();
+		
+		stateExample();
 	}
 
 	private static void factoryMethodExample() {
@@ -96,4 +101,14 @@ public class App {
 		bank.applyForLoan(100000000);
 	}
 	
+	private static void stateExample() {
+		Mobile mobile = new Mobile();
+		mobile.alert();
+		
+		mobile.setAlarmState(new Vibration());
+		mobile.alert();
+		
+		mobile.setAlarmState(new Silent());
+		mobile.alert();
+	}
 }

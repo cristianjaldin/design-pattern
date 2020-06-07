@@ -131,6 +131,21 @@ bank.applyForLoan(100000000);
 
 # State
 
+It allows an object to alter its behavior when its internal state changes. The benefit of the State pattern is that state-specific logic is localized in classes that represent that state.
+In the following example we have a mobile that has different alarms and depending on which one we have configured, the behavior will be different.
+
+```java
+Mobile mobile = new Mobile();
+mobile.alert();
+		
+mobile.setAlarmState(new Vibration());
+mobile.alert();
+		
+mobile.setAlarmState(new Silent());
+mobile.alert();
+```
+![State](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/behavioral/state/State.gif?raw=true)
+
 # Interpreter
 
 # Strategy
