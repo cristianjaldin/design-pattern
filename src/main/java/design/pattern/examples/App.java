@@ -20,6 +20,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import design.pattern.examples.behavioral.chainofresponsibility.Bank;
+import design.pattern.examples.behavioral.observer.Car;
+import design.pattern.examples.behavioral.observer.MessagePublisher;
+import design.pattern.examples.behavioral.observer.Pedestrian;
+import design.pattern.examples.behavioral.observer.TrafficLight;
 import design.pattern.examples.behavioral.state.Mobile;
 import design.pattern.examples.behavioral.state.Silent;
 import design.pattern.examples.behavioral.state.Vibration;
@@ -36,19 +40,19 @@ import static design.pattern.examples.creational.prototype.PrototypeFactory.Elec
  */
 public class App {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		// factoryMethodExample();
 		// abstractFactoryExample();
 		// builderExample();
 		// prototypeExample();
 		// singlentonExample();
-		
+
 		// comportamiento
 		// chainofresponsibilityExample();
-		
+	       observerExample();
 		// stateExample();
-		
-		strategyExample();
+
+		// strategyExample();
 	}
 
 	private static void factoryMethodExample() {
@@ -81,11 +85,11 @@ public class App {
 	}
 
 	private static void prototypeExample() {
-		
+
 		PrototypeFactory.loadElectronicProduct();
-		
+
 		try {
-			
+
 			ElectronicProductPrototype play = PrototypeFactory.getInstance(PLAY);
 			play.getElectronicProduct();
 
@@ -94,41 +98,58 @@ public class App {
 
 			ElectronicProductPrototype laptop = PrototypeFactory.getInstance(LAPTOP);
 			laptop.getElectronicProduct();
-			
+
 		} catch (CloneNotSupportedException e) {
 			e.printStackTrace();
 		}
 	}
-	
-	private static void singlentonExample(){
+
+	private static void singlentonExample() {
 		Shenlong shenlong = Shenlong.getINSTANCE();
 		shenlong.fulfillWish("I just want to travel as much as I can, explore the world, meet people and learn from my experiences.");
-    }
-	
+	}
+
 	private static void chainofresponsibilityExample() {
 		Bank bank = new Bank();
 		bank.applyForLoan(100000000);
 	}
-	
+
+	private static void observerExample() throws InterruptedException {
+		
+		Car car = new Car();
+		Pedestrian walker = new Pedestrian();
+		
+		MessagePublisher messagePublisher = new MessagePublisher();
+
+		messagePublisher.attach(car);
+		messagePublisher.attach(walker);
+		
+		messagePublisher.notifyUpdate(new TrafficLight("ROJO"));
+		
+		Thread.sleep(5000);
+		
+		messagePublisher.notifyUpdate(new TrafficLight("VERDE"));
+	}
+
 	private static void stateExample() {
 		Mobile mobile = new Mobile();
 		mobile.alert();
-		
+
 		mobile.setAlarmState(new Vibration());
 		mobile.alert();
-		
+
 		mobile.setAlarmState(new Silent());
 		mobile.alert();
 	}
-	
+
 	private static void strategyExample() {
 		Questionnaire oneQuestionnaire = new Questionnaire("Quiz");
-		//default strategy - get first question
+		// default strategy - get first question
 		oneQuestionnaire.getQuestion();
-		//change strategy - get last question
+		// change strategy - get last question
 		oneQuestionnaire.setQuestionStrategy(new LastQuestionStrategy());
 		oneQuestionnaire.getQuestion();
-		//change strategy - get random question
+		// change strategy - get random question
 		oneQuestionnaire.setQuestionStrategy(new RandomQuestionStrategy());
 		oneQuestionnaire.getQuestion();
 	}

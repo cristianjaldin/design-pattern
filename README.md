@@ -127,6 +127,23 @@ bank.applyForLoan(100000000);
 
 # Observer
 
+```java
+Car car = new Car();
+Pedestrian walker = new Pedestrian();
+		
+MessagePublisher messagePublisher = new MessagePublisher();
+messagePublisher.attach(car);
+messagePublisher.attach(walker);
+		
+messagePublisher.notifyUpdate(new TrafficLight("ROJO"));
+		
+Thread.sleep(5000);
+		
+messagePublisher.notifyUpdate(new TrafficLight("VERDE"));
+```
+![Observer](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/behavioral/observer/Observer.gif?raw=true)
+
+
 # State
 
 It allows an object to alter its behavior when its internal state changes. The benefit of the State pattern is that state-specific logic is localized in classes that represent that state.
