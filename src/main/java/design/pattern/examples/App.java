@@ -16,10 +16,17 @@ import design.pattern.examples.creational.singleton.Shenlong;
 import static design.pattern.examples.creational.prototype.PrototypeFactory.ElectronicProductType.PLAY;
 import static design.pattern.examples.creational.prototype.PrototypeFactory.ElectronicProductType.TV;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import design.pattern.examples.behavioral.chainofresponsibility.Bank;
 import design.pattern.examples.behavioral.state.Mobile;
 import design.pattern.examples.behavioral.state.Silent;
 import design.pattern.examples.behavioral.state.Vibration;
+import design.pattern.examples.behavioral.strategy.LastQuestionStrategy;
+import design.pattern.examples.behavioral.strategy.Question;
+import design.pattern.examples.behavioral.strategy.Questionnaire;
+import design.pattern.examples.behavioral.strategy.RandomQuestionStrategy;
 
 import static design.pattern.examples.creational.prototype.PrototypeFactory.ElectronicProductType.LAPTOP;
 
@@ -39,7 +46,9 @@ public class App {
 		// comportamiento
 		// chainofresponsibilityExample();
 		
-		stateExample();
+		// stateExample();
+		
+		strategyExample();
 	}
 
 	private static void factoryMethodExample() {
@@ -110,5 +119,17 @@ public class App {
 		
 		mobile.setAlarmState(new Silent());
 		mobile.alert();
+	}
+	
+	private static void strategyExample() {
+		Questionnaire oneQuestionnaire = new Questionnaire("Quiz");
+		//default strategy - get first question
+		oneQuestionnaire.getQuestion();
+		//change strategy - get last question
+		oneQuestionnaire.setQuestionStrategy(new LastQuestionStrategy());
+		oneQuestionnaire.getQuestion();
+		//change strategy - get random question
+		oneQuestionnaire.setQuestionStrategy(new RandomQuestionStrategy());
+		oneQuestionnaire.getQuestion();
 	}
 }

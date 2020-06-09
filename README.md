@@ -150,6 +150,21 @@ mobile.alert();
 
 # Strategy
 
+
+```java
+Questionnaire oneQuestionnaire = new Questionnaire("Quiz");
+//default strategy - get first question
+oneQuestionnaire.getQuestion();
+//change strategy - get last question
+oneQuestionnaire.setQuestionStrategy(new LastQuestionStrategy());
+oneQuestionnaire.getQuestion();
+//change strategy - get random question
+oneQuestionnaire.setQuestionStrategy(new RandomQuestionStrategy());
+oneQuestionnaire.getQuestion();
+```
+![Strategy](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/behavioral/strategy/Strategy.gif?raw=true)
+
+
 # Template Method
 
 # Visitor
