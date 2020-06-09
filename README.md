@@ -115,15 +115,13 @@ bank.applyForLoan(100000000);
 
 # Command
 
-![Command](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/behavioral/command/Command.gif?raw=true)
+
 
 # Iterator
 
-![Iterator](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/behavioral/iterator/Iterator.gif?raw=true)
 
 # Mediator
 
-![Mediator](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/behavioral/mediator/Mediator.gif?raw=true)
 
 # Memento
 
