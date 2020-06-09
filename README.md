@@ -150,6 +150,7 @@ mobile.alert();
 
 # Strategy
 
+It defines a family of algorithms, encapsulates each one, and makes them interchangeable. In this example we have three algorithms to get a question from a set of questions.
 
 ```java
 Questionnaire oneQuestionnaire = new Questionnaire("Quiz");
