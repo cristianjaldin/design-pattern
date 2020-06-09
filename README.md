@@ -92,7 +92,7 @@ ElectronicProductPrototype laptop = PrototypeFactory.getInstance(LAPTOP);
 
 # Singleton
 
-It ensures a class has only one instance and provide a global point of access to it. 
+It ensures a class has only one instance and provide a global point of access to it. In this example there can only be a single Shenlong in Namekusei.
 
 ```java
 Shenlong shenlong = Shenlong.getINSTANCE();
@@ -126,6 +126,8 @@ bank.applyForLoan(100000000);
 # Memento
 
 # Observer
+
+The observer pattern is a software design pattern in which an object, called the subject, maintains a list of its dependents, called observers, and notifies them automatically of any state changes, usually by calling one of their methods. In the following example we have a pedestrian and a car that will be notified when the traffic light changes.
 
 ```java
 Car car = new Car();
