@@ -185,7 +185,7 @@ oneQuestionnaire.getQuestion();
 
 # Template Method
 
-It defines an algorithm as skeleton of operations and leave the details to be implemented by the child classes. The overall structure and sequence of the algorithm is preserved by the parent class.
+It defines an algorithm as skeleton of operations and leave the details to be implemented by the child classes. The overall structure and sequence of the algorithm is preserved by the parent class. For example [EmpanadaMaker.java](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/behavioral/templatemethod/EmpanadaMaker.java)
 
 ```java
 System.out.println("-----Making Meat Empanada-----");
