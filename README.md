@@ -185,6 +185,22 @@ oneQuestionnaire.getQuestion();
 
 # Template Method
 
+```java
+System.out.println("-----Making Meat Empanada-----");
+EmpanadaMaker meatEmpanadaMaker = new MeatEmpanadaMaker();
+meatEmpanadaMaker.makeEmpanada();
+        
+System.out.println("-----Making Vegan Empanada-----");
+EmpanadaMaker veganEmpanadaMaker = new VeganEmpanadaMaker();
+veganEmpanadaMaker.makeEmpanada();
+        
+System.out.println("-----Making Venezuelan Empanada-----");
+EmpanadaMaker venezuelanEmpanadaMaker = new VenezuelanEmpanadaMaker();
+venezuelanEmpanadaMaker.makeEmpanada();
+```
+![Template Method](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/behavioral/templatemethod/Templatemethod.gif?raw=true)
+
+
 # Visitor
 
 # Adapter

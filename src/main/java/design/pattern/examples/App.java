@@ -31,6 +31,10 @@ import design.pattern.examples.behavioral.strategy.LastQuestionStrategy;
 import design.pattern.examples.behavioral.strategy.Question;
 import design.pattern.examples.behavioral.strategy.Questionnaire;
 import design.pattern.examples.behavioral.strategy.RandomQuestionStrategy;
+import design.pattern.examples.behavioral.templatemethod.EmpanadaMaker;
+import design.pattern.examples.behavioral.templatemethod.MeatEmpanadaMaker;
+import design.pattern.examples.behavioral.templatemethod.VeganEmpanadaMaker;
+import design.pattern.examples.behavioral.templatemethod.VenezuelanEmpanadaMaker;
 
 import static design.pattern.examples.creational.prototype.PrototypeFactory.ElectronicProductType.LAPTOP;
 
@@ -49,10 +53,11 @@ public class App {
 
 		// comportamiento
 		// chainofresponsibilityExample();
-	       observerExample();
+	    // observerExample();
 		// stateExample();
 
 		// strategyExample();
+	       templateMethodExample();
 	}
 
 	private static void factoryMethodExample() {
@@ -152,5 +157,19 @@ public class App {
 		// change strategy - get random question
 		oneQuestionnaire.setQuestionStrategy(new RandomQuestionStrategy());
 		oneQuestionnaire.getQuestion();
+	}
+	
+	private static void templateMethodExample() {	
+        System.out.println("-----Making Meat Empanada-----");
+        EmpanadaMaker meatEmpanadaMaker = new MeatEmpanadaMaker();
+        meatEmpanadaMaker.makeEmpanada();
+        
+        System.out.println("-----Making Vegan Empanada-----");
+        EmpanadaMaker veganEmpanadaMaker = new VeganEmpanadaMaker();
+        veganEmpanadaMaker.makeEmpanada();
+        
+        System.out.println("-----Making Venezuelan Empanada-----");
+        EmpanadaMaker venezuelanEmpanadaMaker = new VenezuelanEmpanadaMaker();
+        venezuelanEmpanadaMaker.makeEmpanada();
 	}
 }
