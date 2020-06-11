@@ -185,6 +185,8 @@ oneQuestionnaire.getQuestion();
 
 # Template Method
 
+It defines an algorithm as skeleton of operations and leave the details to be implemented by the child classes. The overall structure and sequence of the algorithm is preserved by the parent class.
+
 ```java
 System.out.println("-----Making Meat Empanada-----");
 EmpanadaMaker meatEmpanadaMaker = new MeatEmpanadaMaker();
