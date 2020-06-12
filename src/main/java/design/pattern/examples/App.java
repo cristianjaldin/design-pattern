@@ -12,6 +12,10 @@ import design.pattern.examples.creational.factorymethod.PaymentType;
 import design.pattern.examples.creational.prototype.ElectronicProductPrototype;
 import design.pattern.examples.creational.prototype.PrototypeFactory;
 import design.pattern.examples.creational.singleton.Shenlong;
+import design.pattern.examples.structural.adapter.IPerson;
+import design.pattern.examples.structural.adapter.Person;
+import design.pattern.examples.structural.adapter.Pessoa;
+import design.pattern.examples.structural.adapter.PessoaToPersonAdapter;
 
 import static design.pattern.examples.creational.prototype.PrototypeFactory.ElectronicProductType.PLAY;
 import static design.pattern.examples.creational.prototype.PrototypeFactory.ElectronicProductType.TV;
@@ -45,6 +49,7 @@ import static design.pattern.examples.creational.prototype.PrototypeFactory.Elec
 public class App {
 
 	public static void main(String[] args) throws Exception {
+		
 		// factoryMethodExample();
 		// abstractFactoryExample();
 		// builderExample();
@@ -57,7 +62,10 @@ public class App {
 		// stateExample();
 
 		// strategyExample();
-	       templateMethodExample();
+	    // templateMethodExample();
+	       
+	    // structural
+		   adapterExample();
 	}
 
 	private static void factoryMethodExample() {
@@ -172,4 +180,28 @@ public class App {
         EmpanadaMaker venezuelanEmpanadaMaker = new VenezuelanEmpanadaMaker();
         venezuelanEmpanadaMaker.makeEmpanada();
 	}
+	
+	private static void adapterExample() {	
+		
+		List<IPerson> people = new ArrayList<IPerson>();
+		
+		Pessoa pessoa = new Pessoa();
+		pessoa.setNome("João");
+		pessoa.setSobrenome("Da silva");
+		PessoaToPersonAdapter adapter = new PessoaToPersonAdapter(pessoa);
+	
+		IPerson person = new Person();
+		person.setName("Frank");
+		person.setSurname("Williams");
+		
+		people.add(person);
+		people.add(adapter);
+		
+		for (IPerson p : people) {
+			System.out.println(p.getName());
+			System.out.println(p.getSurname());	
+		}
+		
+	}
+	
 }
