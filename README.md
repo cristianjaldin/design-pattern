@@ -207,7 +207,7 @@ venezuelanEmpanadaMaker.makeEmpanada();
 
 # Adapter
 
-An Adapter pattern acts as a connector between two incompatible interfaces that otherwise cannot be connected directly. An Adapter wraps an existing class with a new interface so that it becomes compatible with the client’s interface.
+An Adapter pattern acts as a connector between two incompatible interfaces that otherwise cannot be connected directly. An Adapter wraps an existing class with a new interface so that it becomes compatible with the client’s interface. In this example we have two different classes with different attribute names that represent a person. [PessoaToPersonAdapter.java](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/adapter/PessoaToPersonAdapter.java) adapts [Pessoa.java](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/adapter/Pessoa.java) to [Person.java](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/adapter/Person.java)
 
 ```java
 List<IPerson> people = new ArrayList<IPerson>();
