@@ -237,7 +237,7 @@ for (IPerson p : people) {
 
 # Decorator
 
-It allows adding new functionalities to classes without modifying their structure. The concept of this pattern is to dynamically add new behavior or functionality to the main class. The decorator pattern is mainly made up of an Interface from which the concrete class is implemented and the decorators that will add more functionality to the concrete class.
+It allows adding new functionalities to classes without modifying their structure. Avoiding the need to create subclasses to the main class to add functionality. The concept of this pattern is to dynamically add new behavior or functionality to the main class. The decorator pattern is mainly made up of an Interface from which the concrete class is implemented and the decorators that will add more functionality to the concrete class.
 
 In this example the component [User.java](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/decorator/User.java) and the decorators [RestrictedUserDecorator.java](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/decorator/RestrictedUserDecorator.java), [AdminUserDecorator.java](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/decorator/AdminUserDecorator.java) and [RootUserDecorator.java](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/decorator/RootUserDecorator.java) implement the interface [UserOperation.java](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/decorator/UserOperation.java). 
 
