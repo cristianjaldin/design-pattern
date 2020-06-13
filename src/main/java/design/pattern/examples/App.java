@@ -16,6 +16,11 @@ import design.pattern.examples.structural.adapter.IPerson;
 import design.pattern.examples.structural.adapter.Person;
 import design.pattern.examples.structural.adapter.Pessoa;
 import design.pattern.examples.structural.adapter.PessoaToPersonAdapter;
+import design.pattern.examples.structural.decorator.AdminUserDecorator;
+import design.pattern.examples.structural.decorator.RestrictedUserDecorator;
+import design.pattern.examples.structural.decorator.RootUserDecorator;
+import design.pattern.examples.structural.decorator.User;
+import design.pattern.examples.structural.decorator.UserOperation;
 import design.pattern.examples.structural.facade.PrinterFacade;
 
 import static design.pattern.examples.creational.prototype.PrototypeFactory.ElectronicProductType.PLAY;
@@ -67,7 +72,8 @@ public class App {
 	       
 	    // structural
 		// adapterExample();
-		   facadeExample();
+		   decoratorExample();
+		// facadeExample();
 	}
 
 	private static void factoryMethodExample() {
@@ -204,6 +210,24 @@ public class App {
 			System.out.println(p.getSurname());	
 		}
 		
+	}
+	
+	private static void decoratorExample(){
+		
+		User user = new User("Cristian Jaldin");
+			
+		UserOperation restrictedUser = new RestrictedUserDecorator(user);
+		restrictedUser.install("Adobe Photoshop.exe");
+		restrictedUser.open("C:\\documens\\cv-cristian.doc");
+		restrictedUser.delete("C:\\documens\\cv-old-cristian.jpg");
+		
+		UserOperation adminUser = new AdminUserDecorator(user);
+		adminUser.ping("172.217.172.100");
+		adminUser.formatDisk("C:");
+		
+		UserOperation rootUser = new RootUserDecorator(user);
+		rootUser.formatDisk("C:");
+				
 	}
 	
 	private static void facadeExample(){

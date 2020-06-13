@@ -237,6 +237,28 @@ for (IPerson p : people) {
 
 # Decorator
 
+It allows adding new functionalities to classes without modifying their structure. The concept of this pattern is to dynamically add new behavior or functionality to the main class. The decorator pattern is mainly made up of an Interface from which the concrete class is implemented and the decorators that will add more functionality to the concrete class.
+
+In this example the component [User.java](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/decorator/User.java) and the decorators [RestrictedUserDecorator.java](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/decorator/RestrictedUserDecorator.java), [AdminUserDecorator.java](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/decorator/AdminUserDecorator.java) and [RootUserDecorator.java](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/decorator/RootUserDecorator.java) implement the interface [UserOperation.java](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/decorator/UserOperation.java). 
+
+```java
+User user = new User("Cristian Jaldin");
+			
+UserOperation restrictedUser = new RestrictedUserDecorator(user);
+restrictedUser.install("Adobe Photoshop.exe");
+restrictedUser.open("C:\\documens\\cv-cristian.doc");
+restrictedUser.delete("C:\\documens\\cv-old-cristian.jpg");
+		
+UserOperation adminUser = new AdminUserDecorator(user);
+adminUser.ping("172.217.172.100");
+adminUser.formatDisk("C:");
+		
+UserOperation rootUser = new RootUserDecorator(user);
+rootUser.formatDisk("C:");
+```
+![Decorator](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/decorator/Decorator.gif?raw=true)
+
+
 # Facade
 
 It provides a simple interface that is accessible to other systems or subsystems. In this way, it simplifies complexity for external clients, exposing a clearer interface and unified access to these functionalities, making it easier to use. In this example, [PrinterFacade.java](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/facade/PrinterFacade.java) configures the printer to later print documents, making them easier for the external client to use.
