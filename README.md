@@ -239,6 +239,14 @@ for (IPerson p : people) {
 
 # Facade
 
+It provides a simple interface that is accessible to other systems or subsystems. In this way, it simplifies complexity for external clients, exposing a clearer interface and unified access to these functionalities, making it easier to use. In this example, [PrinterFacade.java](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/facade/PrinterFacade.java) configures the printer to later print documents, making them easier for the external client to use.
+
+```java
+PrinterFacade printerFacade = new PrinterFacade("...Testing printer...");
+printerFacade.print();
+```
+![Facade](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/facade/Facade.gif?raw=true)
+
 # Flyweight
 
 # Proxy

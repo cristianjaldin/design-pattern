@@ -16,6 +16,7 @@ import design.pattern.examples.structural.adapter.IPerson;
 import design.pattern.examples.structural.adapter.Person;
 import design.pattern.examples.structural.adapter.Pessoa;
 import design.pattern.examples.structural.adapter.PessoaToPersonAdapter;
+import design.pattern.examples.structural.facade.PrinterFacade;
 
 import static design.pattern.examples.creational.prototype.PrototypeFactory.ElectronicProductType.PLAY;
 import static design.pattern.examples.creational.prototype.PrototypeFactory.ElectronicProductType.TV;
@@ -65,7 +66,8 @@ public class App {
 	    // templateMethodExample();
 	       
 	    // structural
-		   adapterExample();
+		// adapterExample();
+		   facadeExample();
 	}
 
 	private static void factoryMethodExample() {
@@ -204,4 +206,8 @@ public class App {
 		
 	}
 	
+	private static void facadeExample(){
+		PrinterFacade printerFacade = new PrinterFacade("...Testing printer...");
+		printerFacade.print();
+	}
 }
