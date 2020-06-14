@@ -33,7 +33,7 @@ Structural
 # Factory Method
 
 It defines an interface for creating an object, but leaves the choice of its type to the subclasses, creation being deferred at run-time.
-In the following example we have the factory [PaymentFactory.java](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/creational/factorymethod/PaymentFactory.java). One of the advantages is that you can easily add new forms of payment.
+In the following example we have the factory [PaymentFactory](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/creational/factorymethod/PaymentFactory.java). One of the advantages is that you can easily add new forms of payment.
 
 ```java
 Payment payment = PaymentFactory.buildPayment(PaymentType.CARD);
@@ -46,7 +46,7 @@ payment.doPayment();
 # Abstract Factory
 
 It provides a way to encapsulate a group of **individual factories** that have a common theme without specifying their concrete classes.
-In this example we have an abstract factory that groups together a warrior factory and an weapon factory.
+In this example we have an abstract factory [FactoryProvider](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/creational/abstractfactory/FactoryProvider.java) that groups together a [WarriorFactory](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/creational/abstractfactory/WarriorFactory.java) and an [WeaponFactory](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/creational/abstractfactory/WeaponFactory.java).
 
 ```java
 AbstractFactory<?> abstractFactory = FactoryProvider.getFactory("WARRIOR");
@@ -184,7 +184,7 @@ oneQuestionnaire.getQuestion();
 
 # Template Method
 
-It defines an algorithm as skeleton of operations and leave the details to be implemented by the child classes. The overall structure and sequence of the algorithm is preserved by the parent class. For example [EmpanadaMaker.java](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/behavioral/templatemethod/EmpanadaMaker.java)
+It defines an algorithm as skeleton of operations and leave the details to be implemented by the child classes. The overall structure and sequence of the algorithm is preserved by the parent class. For example [EmpanadaMaker](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/behavioral/templatemethod/EmpanadaMaker.java)
 
 ```java
 System.out.println("-----Making Meat Empanada-----");
@@ -206,7 +206,7 @@ venezuelanEmpanadaMaker.makeEmpanada();
 
 # Adapter
 
-An Adapter pattern acts as a connector between two incompatible interfaces that otherwise cannot be connected directly. An Adapter wraps an existing class with a new interface so that it becomes compatible with the client’s interface. In this example we have two different classes with different attribute names that represent a person. [PessoaToPersonAdapter.java](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/adapter/PessoaToPersonAdapter.java) adapts [Pessoa.java](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/adapter/Pessoa.java) to [Person.java](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/adapter/Person.java)
+An Adapter pattern acts as a connector between two incompatible interfaces that otherwise cannot be connected directly. An Adapter wraps an existing class with a new interface so that it becomes compatible with the client’s interface. In this example we have two different classes with different attribute names that represent a person. [PessoaToPersonAdapter](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/adapter/PessoaToPersonAdapter.java) adapts [Pessoa](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/adapter/Pessoa.java) to [Person](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/adapter/Person.java)
 
 ```java
 List<IPerson> people = new ArrayList<IPerson>();
@@ -238,7 +238,7 @@ for (IPerson p : people) {
 
 It allows adding new functionalities to classes without modifying their structure. Avoiding the need to create subclasses to the main class to add functionality. The concept of this pattern is to dynamically add new behavior or functionality to the main class. The decorator pattern is mainly made up of an Interface from which the concrete class is implemented and the decorators that will add more functionality to the concrete class.
 
-In this example the component [User.java](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/decorator/User.java) and the decorators [RestrictedUserDecorator.java](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/decorator/RestrictedUserDecorator.java), [AdminUserDecorator.java](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/decorator/AdminUserDecorator.java) and [RootUserDecorator.java](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/decorator/RootUserDecorator.java) implement the interface [UserOperation.java](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/decorator/UserOperation.java). 
+In this example the component [User](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/decorator/User.java) and the decorators [RestrictedUserDecorator](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/decorator/RestrictedUserDecorator.java), [AdminUserDecorator](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/decorator/AdminUserDecorator.java) and [RootUserDecorator](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/decorator/RootUserDecorator.java) implement the interface [UserOperation](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/decorator/UserOperation.java). 
 
 ```java
 User user = new User("Cristian Jaldin");
@@ -260,7 +260,7 @@ rootUser.formatDisk("C:");
 
 # Facade
 
-It provides a simple interface that is accessible to other systems or subsystems. In this way, it simplifies complexity for external clients, exposing a clearer interface and unified access to these functionalities, making it easier to use. In this example, [PrinterFacade.java](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/facade/PrinterFacade.java) configures the printer to later print documents, making them easier for the external client to use.
+It provides a simple interface that is accessible to other systems or subsystems. In this way, it simplifies complexity for external clients, exposing a clearer interface and unified access to these functionalities, making it easier to use. In this example, [PrinterFacade](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/facade/PrinterFacade.java) configures the printer to later print documents, making them easier for the external client to use.
 
 ```java
 PrinterFacade printerFacade = new PrinterFacade("...Testing printer...");
