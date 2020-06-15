@@ -16,6 +16,10 @@ import design.pattern.examples.structural.adapter.IPerson;
 import design.pattern.examples.structural.adapter.Person;
 import design.pattern.examples.structural.adapter.Pessoa;
 import design.pattern.examples.structural.adapter.PessoaToPersonAdapter;
+import design.pattern.examples.structural.composite.Developer;
+import design.pattern.examples.structural.composite.Manager;
+import design.pattern.examples.structural.composite.TeamLeader;
+import design.pattern.examples.structural.composite.WebDesigner;
 import design.pattern.examples.structural.decorator.AdminUserDecorator;
 import design.pattern.examples.structural.decorator.RestrictedUserDecorator;
 import design.pattern.examples.structural.decorator.RootUserDecorator;
@@ -72,7 +76,8 @@ public class App {
 	       
 	    // structural
 		// adapterExample();
-		   decoratorExample();
+		   compositeExample();
+		// decoratorExample();
 		// facadeExample();
 	}
 
@@ -210,6 +215,22 @@ public class App {
 			System.out.println(p.getSurname());	
 		}
 		
+	}
+	
+	private static void compositeExample() {
+
+		Manager manager = new Manager("Fer");	
+		TeamLeader leader = new TeamLeader("Marian");
+		Developer backendDeveloper = new Developer("Marito");
+		Developer frontendDeveloper = new Developer("Karla");
+		WebDesigner designer = new WebDesigner("Caro");
+		
+		manager.addEmployee(leader);
+		leader.addEmployee(backendDeveloper);
+		leader.addEmployee(frontendDeveloper);
+		leader.addEmployee(designer);
+		
+		manager.doWork();			
 	}
 	
 	private static void decoratorExample(){
