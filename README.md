@@ -234,6 +234,11 @@ for (IPerson p : people) {
 
 # Composite
 
+It lets you compose objects into tree structures and then work with these structures as if they were individual objects.
+Using the Composite pattern makes sense only when the core model of your app can be represented as a tree.
+  
+For example, imagine that you are an [Employee](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/composite/Employee.java) and you can other Employees[EmployeeComposite](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/composite/EmployeeComposite.java). 
+
 ```java
 //Team 1
 EmployeeComposite leader = new EmployeeComposite("Marian","LIDER");
