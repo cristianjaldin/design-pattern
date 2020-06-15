@@ -16,10 +16,8 @@ import design.pattern.examples.structural.adapter.IPerson;
 import design.pattern.examples.structural.adapter.Person;
 import design.pattern.examples.structural.adapter.Pessoa;
 import design.pattern.examples.structural.adapter.PessoaToPersonAdapter;
-import design.pattern.examples.structural.composite.Developer;
-import design.pattern.examples.structural.composite.Manager;
-import design.pattern.examples.structural.composite.TeamLeader;
-import design.pattern.examples.structural.composite.WebDesigner;
+import design.pattern.examples.structural.composite.Employee;
+import design.pattern.examples.structural.composite.EmployeeComposite;
 import design.pattern.examples.structural.decorator.AdminUserDecorator;
 import design.pattern.examples.structural.decorator.RestrictedUserDecorator;
 import design.pattern.examples.structural.decorator.RootUserDecorator;
@@ -218,19 +216,27 @@ public class App {
 	}
 	
 	private static void compositeExample() {
-
-		Manager manager = new Manager("Fer");	
-		TeamLeader leader = new TeamLeader("Marian");
-		Developer backendDeveloper = new Developer("Marito");
-		Developer frontendDeveloper = new Developer("Karla");
-		WebDesigner designer = new WebDesigner("Caro");
-		
-		manager.addEmployee(leader);
-		leader.addEmployee(backendDeveloper);
-		leader.addEmployee(frontendDeveloper);
+		//Team 1
+		EmployeeComposite leader = new EmployeeComposite("Marian","LIDER");
+		Employee developer = new Employee("Karla","DESARROLLADOR");
+		Employee designer = new Employee("Caro","DISEÑADOR");
+		leader.addEmployee(developer);
 		leader.addEmployee(designer);
 		
-		manager.doWork();			
+		//Team 2
+		EmployeeComposite leader2 = new EmployeeComposite("Steve","LIDER");
+		Employee developer2 = new Employee("Jimmy","DESARROLLADOR");
+		Employee designer2 = new Employee("Luciano","DISEÑADOR");
+		leader2.addEmployee(developer2);
+		leader2.addEmployee(designer2);
+		
+		//Manager
+		EmployeeComposite manager = new EmployeeComposite("Fer","GERENTE");
+		manager.addEmployee(leader);
+		manager.addEmployee(leader2);
+		
+		//Trigger
+		manager.doWork();
 	}
 	
 	private static void decoratorExample(){

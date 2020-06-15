@@ -234,6 +234,32 @@ for (IPerson p : people) {
 
 # Composite
 
+```java
+//Team 1
+EmployeeComposite leader = new EmployeeComposite("Marian","LIDER");
+Employee developer = new Employee("Karla","DESARROLLADOR");
+Employee designer = new Employee("Caro","DISEÑADOR");
+leader.addEmployee(developer);
+leader.addEmployee(designer);
+		
+//Team 2
+EmployeeComposite leader2 = new EmployeeComposite("Steve","LIDER");
+Employee developer2 = new Employee("Jimmy","DESARROLLADOR");
+Employee designer2 = new Employee("Luciano","DISEÑADOR");
+leader2.addEmployee(developer2);
+leader2.addEmployee(designer2);
+		
+//Manager
+EmployeeComposite manager = new EmployeeComposite("Fer","GERENTE");
+manager.addEmployee(leader);
+manager.addEmployee(leader2);
+		
+//Trigger
+manager.doWork();
+```
+![Composite](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/composite/Composite.gif?raw=true)
+
+
 # Decorator
 
 It allows adding new functionalities to classes without modifying their structure. Avoiding the need to create subclasses to the main class to add functionality. The concept of this pattern is to dynamically add new behavior or functionality to the main class. The decorator pattern is mainly made up of an Interface from which the concrete class is implemented and the decorators that will add more functionality to the concrete class.

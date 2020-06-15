@@ -3,22 +3,25 @@ package design.pattern.examples.structural.composite;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Manager implements IEmployee {
-	
+public class EmployeeComposite implements IEmployee {
+
 	private String name;
+	private String type;
+	
 	private List<IEmployee> employees = new ArrayList<IEmployee>();
 	
 	public void doWork() {
-		System.out.println("Gerente trabajando");
+		System.out.println(type+" trabajando");
 		for (IEmployee employee : employees) {
 			employee.doWork();
 		}
 	}
-	
-	public Manager(String name) {
-		this.name = name;
-	}
 
+	public EmployeeComposite(String name, String type) {
+		this.name = name;
+		this.type = type;
+	}
+	
 	public String getName() {
 		return name;
 	}
@@ -30,5 +33,11 @@ public class Manager implements IEmployee {
 	public void addEmployee(IEmployee employee) {
 		employees.add(employee);
 	}
+	public String getType() {
+		return type;
+	}
 
+	public void setType(String type) {
+		this.type = type;
+	}
 }
