@@ -237,25 +237,25 @@ for (IPerson p : people) {
 It lets you compose objects into tree structures and then work with these structures as if they were individual objects.
 Using the Composite pattern makes sense only when the core model of your app can be represented as a tree.
   
-For example, imagine that you are an [Employee](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/composite/Employee.java) and you can other Employees[EmployeeComposite](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/composite/EmployeeComposite.java). 
+For example, imagine that you are an [Employee](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/composite/Employee.java) and you can other Employees [EmployeeComposite](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/composite/EmployeeComposite.java). 
 
 ```java
 //Team 1
-EmployeeComposite leader = new EmployeeComposite("Marian","LIDER");
-Employee developer = new Employee("Karla","DESARROLLADOR");
-Employee designer = new Employee("Caro","DISEÑADOR");
+EmployeeComposite leader = new EmployeeComposite("Marian","LEADER");
+Employee developer = new Employee("Karla","DEVELOPER");
+Employee designer = new Employee("Caro","DESIGNER");
 leader.addEmployee(developer);
 leader.addEmployee(designer);
 		
 //Team 2
-EmployeeComposite leader2 = new EmployeeComposite("Steve","LIDER");
-Employee developer2 = new Employee("Jimmy","DESARROLLADOR");
-Employee designer2 = new Employee("Luciano","DISEÑADOR");
+EmployeeComposite leader2 = new EmployeeComposite("Steve","LEADER");
+Employee developer2 = new Employee("Jimmy","DEVELOPER");
+Employee designer2 = new Employee("Luciano","DESIGNER");
 leader2.addEmployee(developer2);
 leader2.addEmployee(designer2);
 		
 //Manager
-EmployeeComposite manager = new EmployeeComposite("Fer","GERENTE");
+EmployeeComposite manager = new EmployeeComposite("Fer","MANAGER");
 manager.addEmployee(leader);
 manager.addEmployee(leader2);
 		

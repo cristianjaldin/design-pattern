@@ -217,21 +217,21 @@ public class App {
 	
 	private static void compositeExample() {
 		//Team 1
-		EmployeeComposite leader = new EmployeeComposite("Marian","LIDER");
-		Employee developer = new Employee("Karla","DESARROLLADOR");
-		Employee designer = new Employee("Caro","DISEÑADOR");
+		EmployeeComposite leader = new EmployeeComposite("Marian","LEADER");
+		Employee developer = new Employee("Karla","DEVELOPER");
+		Employee designer = new Employee("Caro","DESIGNER");
 		leader.addEmployee(developer);
 		leader.addEmployee(designer);
 		
 		//Team 2
-		EmployeeComposite leader2 = new EmployeeComposite("Steve","LIDER");
-		Employee developer2 = new Employee("Jimmy","DESARROLLADOR");
-		Employee designer2 = new Employee("Luciano","DISEÑADOR");
+		EmployeeComposite leader2 = new EmployeeComposite("Steve","LEADER");
+		Employee developer2 = new Employee("Jimmy","DEVELOPER");
+		Employee designer2 = new Employee("Luciano","DESIGNER");
 		leader2.addEmployee(developer2);
 		leader2.addEmployee(designer2);
 		
 		//Manager
-		EmployeeComposite manager = new EmployeeComposite("Fer","GERENTE");
+		EmployeeComposite manager = new EmployeeComposite("Fer","MANAGER");
 		manager.addEmployee(leader);
 		manager.addEmployee(leader2);
 		
