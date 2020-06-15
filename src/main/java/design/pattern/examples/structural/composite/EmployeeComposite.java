@@ -22,6 +22,14 @@ public class EmployeeComposite implements IEmployee {
 		this.type = type;
 	}
 	
+	public void addEmployee(IEmployee employee) {
+		employees.add(employee);
+	}
+	
+	public void removeEmployee(IEmployee employee) {
+		employees.remove(employee);
+	}
+	
 	public String getName() {
 		return name;
 	}
@@ -30,9 +38,6 @@ public class EmployeeComposite implements IEmployee {
 		this.name = name;
 	}
 	
-	public void addEmployee(IEmployee employee) {
-		employees.add(employee);
-	}
 	public String getType() {
 		return type;
 	}

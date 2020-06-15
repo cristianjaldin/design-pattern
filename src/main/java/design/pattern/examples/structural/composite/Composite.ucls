@@ -15,7 +15,7 @@
   <class id="2" language="java" name="design.pattern.examples.structural.composite.Employee" project="design-pattern" 
     file="/design-pattern/src/main/java/design/pattern/examples/structural/composite/Employee.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="124" y="268"/>    
+    <position height="-1" width="-1" x="135" y="259"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -33,22 +33,22 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <association id="4">    
+  <realization id="4">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="1"/>  
+  </realization>  
+  <association id="5">    
     <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="5" name="employees">        
+      <attribute id="6" name="employees">        
         <position height="0" width="0" x="-236" y="-4"/>      
       </attribute>      
-      <multiplicity id="6" minimum="0" maximum="2147483647">        
+      <multiplicity id="7" minimum="0" maximum="2147483647">        
         <position height="0" width="0" x="-236" y="-4"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="1" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="7">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="1"/>  
-  </realization>  
   <realization id="8">    
     <end type="SOURCE" refId="2"/>    
     <end type="TARGET" refId="1"/>  
