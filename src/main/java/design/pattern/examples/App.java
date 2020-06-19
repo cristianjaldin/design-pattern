@@ -69,12 +69,12 @@ public class App {
 
 		// Behavioral
 		// chainofresponsibilityExample();
-	    // observerExample();
+		// observerExample();
 		// stateExample();
 		// strategyExample();
-	    // templateMethodExample();
+		// templateMethodExample();
 	       
-	    // Structural
+		// Structural
 		// adapterExample();
 		// compositeExample();
 		// decoratorExample();
