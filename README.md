@@ -1,5 +1,8 @@
 # Design-pattern
 
+You can run the application and test the examples with [App.java](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/App.java)
+
+
 Creational
 - [Factory Method](#factory-method)  
 - [Abstract Factory](#abstract-factory) 

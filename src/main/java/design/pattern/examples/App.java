@@ -58,25 +58,26 @@ public class App {
 
 	public static void main(String[] args) throws Exception {
 		
+		// Creational
 		// factoryMethodExample();
 		// abstractFactoryExample();
 		// builderExample();
 		// prototypeExample();
 		// singlentonExample();
 
-		// comportamiento
+		// Behavioral
 		// chainofresponsibilityExample();
 	    // observerExample();
 		// stateExample();
-
 		// strategyExample();
 	    // templateMethodExample();
 	       
-	    // structural
+	    // Structural
 		// adapterExample();
 		   compositeExample();
 		// decoratorExample();
 		// facadeExample();
+		   
 	}
 
 	private static void factoryMethodExample() {
