@@ -32,8 +32,7 @@ Structural
 
 # Factory Method
 
-It defines an interface for creating an object, but leaves the choice of its type to the subclasses, creation being deferred at run-time.
-In the following example we have the factory [PaymentFactory](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/creational/factorymethod/PaymentFactory.java). One of the advantages is that you can easily add new forms of payment.
+It defines an interface for creating an object, but leaves the choice of its type to the subclasses, creation being deferred at run-time. In the following example we have the factory [PaymentFactory](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/creational/factorymethod/PaymentFactory.java). One of the advantages is that you can easily add new forms of payment.
 
 ```java
 Payment payment = PaymentFactory.buildPayment(PaymentType.CARD);
@@ -65,7 +64,8 @@ oneViking.doAttack(onAxe);
 
 # Builder
 
-It builds a complex object using simple objects and using a step by step approach. In this example we build an Bank Account.
+It builds a complex object using simple objects and using a step by step approach. 
+In this example we build an [BankAccount](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/creational/builder/BankAccount.java).
 
 ```java
 BankAccount bankAccount = new BankAccountBuilder(1114467234l, "Cristian Jaldin")
@@ -79,6 +79,7 @@ BankAccount bankAccount = new BankAccountBuilder(1114467234l, "Cristian Jaldin")
 # Prototype
 
 This pattern is used in scenarios where application needs to create a number of instances of a class, which has almost same state or differs very little. It is used when creation of object directly is costly. The concept is to copy an existing object rather than creating a new instance from scratch. 
+In this example we have a [PrototypeFactory](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/creational/prototype/PrototypeFactory.java) that implements an [ElectronicProductPrototype](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/creational/prototype/ElectronicProductPrototype.java) and clones [TV](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/creational/prototype/Tv.java), [Play Station](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/creational/prototype/PlayStation.java) and [Laptop](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/creational/prototype/Laptop.java).
 
 ```java
 ElectronicProductPrototype play = PrototypeFactory.getInstance(PLAY);
@@ -91,7 +92,7 @@ ElectronicProductPrototype laptop = PrototypeFactory.getInstance(LAPTOP);
 
 # Singleton
 
-It ensures a class has only one instance and provide a global point of access to it. In this example there can only be a single Shenlong in Namekusei.
+It ensures a class has only one instance and provide a global point of access to it. In this example there can only be a single [Shenlong](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/creational/singleton/Shenlong.java) in Namekusei.
 
 ```java
 Shenlong shenlong = Shenlong.getINSTANCE();
@@ -104,7 +105,7 @@ shenlong.fulfillWish(myWish);
 # Chain of responsibility
 
 It builds a chain of objects to handle a call in sequential order. If one object cannot handle a call, it delegates the call to the next in the chain and so forth.
-In the following example, a bank generates a chain  of responsibility to process loan applications. The request can be processed by an executive, manager or director according to the amount.
+In the following example, a [Bank](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/behavioral/chainofresponsibility/Bank.java) generates a chain  of responsibility to process loan applications. The request can be processed by an [Executive](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/behavioral/chainofresponsibility/Executive.java), [Manager](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/behavioral/chainofresponsibility/Manager.java) or [Director](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/behavioral/chainofresponsibility/Director.java) according to the amount.
 
 ```java
 Bank bank = new Bank();
@@ -126,7 +127,7 @@ bank.applyForLoan(100000000);
 
 # Observer
 
-The observer pattern is a software design pattern in which an object, called the subject, maintains a list of its dependents, called observers, and notifies them automatically of any state changes, usually by calling one of their methods. In the following example we have a pedestrian and a car that will be notified when the traffic light changes.
+The observer pattern is a software design pattern in which an object, called the subject, maintains a list of its dependents, called observers, and notifies them automatically of any state changes, usually by calling one of their methods. In the following example we have a [Pedestrian](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/behavioral/observer/Pedestrian.java) and a [Car](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/behavioral/observer/Car.java) that will be notified when the traffic light changes.
 
 ```java
 Car car = new Car();
@@ -148,7 +149,7 @@ messagePublisher.notifyUpdate(new TrafficLight("VERDE"));
 # State
 
 It allows an object to alter its behavior when its internal state changes. The benefit of the State pattern is that state-specific logic is localized in classes that represent that state.
-In the following example we have a mobile that has different alarms and depending on which one we have configured, the behavior will be different.
+In the following example we have a [Mobile](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/behavioral/state/Mobile.java) that has different alarms like [Sound](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/behavioral/state/Sound.java), [Vibration](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/behavioral/state/Vibration.java) and [Silent](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/behavioral/state/Silent.java). Depending on which one we have configured, the behavior will be different.
 
 ```java
 Mobile mobile = new Mobile();
