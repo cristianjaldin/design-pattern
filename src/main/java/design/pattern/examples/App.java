@@ -51,7 +51,9 @@ import design.pattern.examples.behavioral.templatemethod.VenezuelanEmpanadaMaker
 import static design.pattern.examples.creational.prototype.PrototypeFactory.ElectronicProductType.LAPTOP;
 
 /**
- * Hello world!
+ * 
+ * 
+ * @author Cristian Jaldin
  *
  */
 public class App {
@@ -59,7 +61,7 @@ public class App {
 	public static void main(String[] args) throws Exception {
 		
 		// Creational
-		// factoryMethodExample();
+		   factoryMethodExample();
 		// abstractFactoryExample();
 		// builderExample();
 		// prototypeExample();
@@ -74,15 +76,18 @@ public class App {
 	       
 	    // Structural
 		// adapterExample();
-		   compositeExample();
+		// compositeExample();
 		// decoratorExample();
 		// facadeExample();
 		   
 	}
 
 	private static void factoryMethodExample() {
-		Payment payment = PaymentFactory.buildPayment(PaymentType.CARD);
-		payment.doPayment();
+		Payment paymentCard = PaymentFactory.buildPayment(PaymentType.CARD);
+		paymentCard.doPayment();
+		
+		Payment paymentMercadoPago = PaymentFactory.buildPayment(PaymentType.MERCADO_PAGO);
+		paymentMercadoPago.doPayment();
 	}
 
 	private static void abstractFactoryExample() {

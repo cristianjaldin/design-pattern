@@ -38,8 +38,11 @@ Structural
 It defines an interface for creating an object, but leaves the choice of its type to the subclasses, creation being deferred at run-time. In the following example we have the factory [PaymentFactory](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/creational/factorymethod/PaymentFactory.java). One of the advantages is that you can easily add new forms of payment.
 
 ```java
-Payment payment = PaymentFactory.buildPayment(PaymentType.CARD);
-payment.doPayment();
+Payment paymentCard = PaymentFactory.buildPayment(PaymentType.CARD);
+paymentCard.doPayment();
+		
+Payment paymentMercadoPago = PaymentFactory.buildPayment(PaymentType.MERCADO_PAGO);
+paymentMercadoPago.doPayment();
 ```
 
 ![Factory Method](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/creational/factorymethod/Factory%20Method.gif?raw=true)
