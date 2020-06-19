@@ -167,7 +167,7 @@ mobile.alert();
 
 # Strategy
 
-It defines a family of algorithms, encapsulates each one, and makes them interchangeable. In this example we have three algorithms to get a question from a set of questions.
+It defines a family of algorithms, encapsulates each one, and makes them interchangeable. In this example we have three algorithms [FirstQuestionStrategy](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/behavioral/strategy/FirstQuestionStrategy.java), [LastQuestionStrategy](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/behavioral/strategy/LastQuestionStrategy.java) and [RandomQuestionStrategy](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/behavioral/strategy/RandomQuestionStrategy.java) to get a question from a set of questions.
 
 ```java
 Questionnaire oneQuestionnaire = new Questionnaire("Quiz");
@@ -238,7 +238,7 @@ for (IPerson p : people) {
 It lets you compose objects into tree structures and then work with these structures as if they were individual objects.
 Using the Composite pattern makes sense only when the core model of your app can be represented as a tree.
   
-For example, imagine that you are an [Employee](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/composite/Employee.java) and you can other Employees [EmployeeComposite](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/composite/EmployeeComposite.java). 
+For example, imagine that you are an [Employee](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/composite/Employee.java) and you can have other Employees [EmployeeComposite](https://github.com/cristianjaldin/design-pattern/blob/master/src/main/java/design/pattern/examples/structural/composite/EmployeeComposite.java). 
 
 ```java
 //Team 1
